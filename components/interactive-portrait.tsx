@@ -13,15 +13,15 @@ export function InteractivePortrait() {
     const bounds = frame.getBoundingClientRect();
     const x = (event.clientX - bounds.left) / bounds.width;
     const y = (event.clientY - bounds.top) / bounds.height;
-    frame.style.setProperty('--portrait-rx', `${(0.5 - y) * 5}deg`);
-    frame.style.setProperty('--portrait-ry', `${(x - 0.5) * 5}deg`);
+    frame.style.setProperty('--portrait-shadow-x', `${18 + (x - 0.5) * 8}px`);
+    frame.style.setProperty('--portrait-shadow-y', `${18 + (y - 0.5) * 8}px`);
   }
 
   function resetPortrait() {
     const frame = frameRef.current;
     if (!frame) return;
-    frame.style.setProperty('--portrait-rx', '0deg');
-    frame.style.setProperty('--portrait-ry', '0deg');
+    frame.style.setProperty('--portrait-shadow-x', '18px');
+    frame.style.setProperty('--portrait-shadow-y', '18px');
   }
 
   return (
@@ -35,7 +35,6 @@ export function InteractivePortrait() {
       >
         <Image src="/ian-yang.png" alt="Ian Yang" fill priority sizes="(max-width: 760px) 88vw, 36vw" />
       </div>
-      <span className="portrait-caption">Berkeley, CA · 2026</span>
     </div>
   );
 }

@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://ian-tc-yang.github.io'),
   title: 'Ian Yang — Research Engineer & UC Berkeley EECS',
   description:
-    'Ian Yang is a research engineer and UC Berkeley EECS student working in multimodal AI, computer vision, robotics, and intelligent design systems.',
+    'Ian Yang is a UC Berkeley EECS student working in multimodal AI, computer vision, and robotics.',
   keywords: [
     'Ian Yang',
     'UC Berkeley EECS',

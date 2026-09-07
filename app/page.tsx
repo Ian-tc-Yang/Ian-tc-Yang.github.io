@@ -36,6 +36,22 @@ const experience = [
     summary:
       'Programmed autonomous free-flying robots for tasks inside the International Space Station and placed first among 2,700+ contestants.',
   },
+  {
+    period: 'May 2022 — Aug 2023',
+    organization: 'YMCA Taiwan',
+    role: 'Event Coordinator & Workshop Lecturer',
+    location: 'Taichung, Taiwan',
+    summary:
+      'Designed and led weekly programming and robotics workshops for underprivileged children, and coordinated a summer camp by developing its curriculum, recruiting teaching assistants, and delivering instruction.',
+  },
+  {
+    period: 'Aug 2021 — Aug 2023',
+    organization: 'IBSC Robotics Workshop',
+    role: 'Founder & President',
+    location: 'Taichung, Taiwan',
+    summary:
+      'Founded and led a robotics program for students in grades 1–12, teaching programming and hardware design and coaching three teams to Distinction awards at the AERC Asia Robotics Competition.',
+  },
 ];
 
 export default function Home() {
@@ -48,9 +64,11 @@ export default function Home() {
             <span className="intro-decoration" aria-hidden="true" />
             <p className="section-label">Profile</p>
             <h1>Ian Yang</h1>
-            <p className="professional-title">Research engineer and UC Berkeley EECS student.</p>
+            <p className="professional-title">
+              UC Berkeley EECS (Electrical Engineering and Computer Science)
+            </p>
             <p className="intro-summary">
-              My work focuses on multimodal AI, computer vision, robotics, and intelligent design systems.
+              My work focuses on multimodal AI, computer vision, and robotics.
             </p>
             <div className="intro-links">
               <a href="mailto:ianyang@berkeley.edu"><Mail size={16} aria-hidden="true" /> ianyang@berkeley.edu</a>
@@ -64,8 +82,8 @@ export default function Home() {
         <section className="profile-facts page-width" aria-label="Personal information">
           <div><span>Education</span><strong>UC Berkeley EECS</strong></div>
           <div><span>Graduation</span><strong>May 2028</strong></div>
-          <div><span>Based in</span><strong>Berkeley / Taichung</strong></div>
-          <div><span>Focus</span><strong>AI · Vision · Robotics</strong></div>
+          <div><span>GPA</span><strong>3.63 / 4.00</strong></div>
+          <div><span>Focus</span><strong>AI/ML · SWE · Robotics</strong></div>
         </section>
 
         <section className="content-section page-width" id="experience">
