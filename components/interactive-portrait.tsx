@@ -33,7 +33,14 @@ export function InteractivePortrait() {
         onPointerMove={handlePointerMove}
         onPointerLeave={resetPortrait}
       >
-        <Image src="/ian-yang.png" alt="Ian Yang" fill priority sizes="(max-width: 760px) 88vw, 36vw" />
+        <Image
+          src="/ian-yang.png"
+          alt="Ian Yang"
+          fill
+          priority
+          quality={100}
+          sizes="(max-width: 760px) 88vw, 36vw"
+        />
       </div>
     </div>
   );

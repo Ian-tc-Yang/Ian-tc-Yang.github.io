@@ -4,17 +4,17 @@ import { SiteFooter } from '@/components/site-footer';
 import { SiteHeader } from '@/components/site-header';
 
 export const metadata: Metadata = {
-  title: 'Work — Ian Yang',
-  description: 'Research, selected projects, publications, and technical skills from Ian Yang.',
+  title: 'Research and Projects — Ian Yang',
+  description: 'Research focus, projects, publications, and technical skills from Ian Yang.',
   openGraph: {
-    title: 'Work — Ian Yang',
-    description: 'Research, selected projects, publications, and technical skills from Ian Yang.',
+    title: 'Research and Projects — Ian Yang',
+    description: 'Research focus, projects, publications, and technical skills from Ian Yang.',
     images: [],
   },
   twitter: {
     card: 'summary',
-    title: 'Work — Ian Yang',
-    description: 'Research, selected projects, publications, and technical skills from Ian Yang.',
+    title: 'Research and Projects — Ian Yang',
+    description: 'Research focus, projects, publications, and technical skills from Ian Yang.',
     images: [],
   },
 };
@@ -111,31 +111,13 @@ export default function WorkPage() {
       <SiteHeader active="work" />
       <main>
         <section className="work-intro page-width">
-          <p className="section-label">Work</p>
-          <h1>Research and selected projects</h1>
+          <h1>Research and Projects</h1>
           <p>Multimodal AI, computer vision, intelligent design systems, and robotics.</p>
         </section>
 
         <section className="work-section page-width">
-          <div className="work-section-title">
-            <p className="section-label">Research focus</p>
-            <h2>Current areas</h2>
-          </div>
-          <div className="research-area-list">
-            {researchAreas.map(([number, title, description]) => (
-              <article key={number}>
-                <span>{number}</span>
-                <h3>{title}</h3>
-                <p>{description}</p>
-              </article>
-            ))}
-          </div>
-        </section>
-
-        <section className="work-section page-width">
-          <div className="work-section-title">
-            <p className="section-label">Projects</p>
-            <h2>Selected work</h2>
+          <div className="work-section-title work-section-title-simple">
+            <h2>Projects</h2>
           </div>
           <div className="work-list">
             {projects.map((project, index) => (
@@ -155,8 +137,7 @@ export default function WorkPage() {
         </section>
 
         <section className="work-section page-width">
-          <div className="work-section-title">
-            <p className="section-label">Writing</p>
+          <div className="work-section-title work-section-title-simple">
             <h2>Publications</h2>
           </div>
           <div className="publication-list-clean">
@@ -166,6 +147,21 @@ export default function WorkPage() {
                 <div><h3>{publication.title}</h3><p>{publication.venue}</p></div>
                 <ArrowUpRight size={15} aria-hidden="true" />
               </a>
+            ))}
+          </div>
+        </section>
+
+        <section className="work-section page-width">
+          <div className="work-section-title work-section-title-simple">
+            <h2>Research Focus</h2>
+          </div>
+          <div className="research-area-list">
+            {researchAreas.map(([number, title, description]) => (
+              <article key={number}>
+                <span>{number}</span>
+                <h3>{title}</h3>
+                <p>{description}</p>
+              </article>
             ))}
           </div>
         </section>
