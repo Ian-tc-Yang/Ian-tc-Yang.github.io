@@ -35,7 +35,6 @@ const projects = [
     result: 'Reported 96% reduction in design time and 97% image-to-CadQuery accuracy.',
     tools: ['Qwen3-VL-32B', 'LoRA', 'Nemotron 30B', 'RAG', 'CadQuery', 'NVIDIA H200'],
     href: '/resume/ian-yang-resume.pdf',
-    link: 'Résumé',
   },
   {
     title: 'UC Berkeley visual computing portfolio',
@@ -45,7 +44,6 @@ const projects = [
     result: 'Six documented course projects, including a featured final project.',
     tools: ['Python', 'PyTorch', 'Computer Vision', 'Image Processing'],
     href: 'https://ian-tc-yang.github.io/cs180/',
-    link: 'View portfolio',
   },
   {
     title: 'Synthetic data for industrial inspection',
@@ -55,7 +53,6 @@ const projects = [
     result: 'Reported 24% improvement in defect-detection accuracy under low-data conditions.',
     tools: ['NVIDIA Cosmos', 'YOLO', 'Synthetic Data', 'Computer Vision'],
     href: '/resume/ian-yang-resume.pdf',
-    link: 'Résumé',
   },
   {
     title: 'Autonomous robotics aboard the ISS',
@@ -65,7 +62,6 @@ const projects = [
     result: 'World champion among 2,700+ contestants from 35+ countries.',
     tools: ['Robotics', 'Autonomy', 'Path Planning', 'Java'],
     href: 'https://humans-in-space.jaxa.jp/krpc/4th/',
-    link: 'JAXA challenge',
   },
 ];
 
@@ -121,7 +117,14 @@ export default function WorkPage() {
           </div>
           <div className="work-list">
             {projects.map((project, index) => (
-              <article className="work-item" key={project.title}>
+              <a
+                className="work-item"
+                href={project.href}
+                target="_blank"
+                rel="noreferrer"
+                key={project.title}
+                aria-label={`View project: ${project.title}`}
+              >
                 <span className="work-number">{String(index + 1).padStart(2, '0')}</span>
                 <div className="work-main">
                   <p className="work-context">{project.context}</p>
@@ -130,8 +133,8 @@ export default function WorkPage() {
                   <p className="work-result">{project.result}</p>
                   <div className="tool-tags">{project.tools.map((tool) => <span key={tool}>{tool}</span>)}</div>
                 </div>
-                <a href={project.href} target="_blank" rel="noreferrer">{project.link} <ArrowUpRight size={14} aria-hidden="true" /></a>
-              </article>
+                <span className="work-link">View project <ArrowUpRight size={14} aria-hidden="true" /></span>
+              </a>
             ))}
           </div>
         </section>

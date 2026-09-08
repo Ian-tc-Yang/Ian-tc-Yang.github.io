@@ -13,6 +13,8 @@ export function InteractivePortrait() {
     const bounds = frame.getBoundingClientRect();
     const x = (event.clientX - bounds.left) / bounds.width;
     const y = (event.clientY - bounds.top) / bounds.height;
+    frame.style.setProperty('--portrait-tilt-x', `${(0.5 - y) * 7}deg`);
+    frame.style.setProperty('--portrait-tilt-y', `${(x - 0.5) * 7}deg`);
     frame.style.setProperty('--portrait-shadow-x', `${18 + (x - 0.5) * 8}px`);
     frame.style.setProperty('--portrait-shadow-y', `${18 + (y - 0.5) * 8}px`);
   }
@@ -20,6 +22,8 @@ export function InteractivePortrait() {
   function resetPortrait() {
     const frame = frameRef.current;
     if (!frame) return;
+    frame.style.setProperty('--portrait-tilt-x', '0deg');
+    frame.style.setProperty('--portrait-tilt-y', '0deg');
     frame.style.setProperty('--portrait-shadow-x', '18px');
     frame.style.setProperty('--portrait-shadow-y', '18px');
   }

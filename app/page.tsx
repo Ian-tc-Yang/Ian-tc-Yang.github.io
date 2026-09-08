@@ -82,7 +82,7 @@ export default function Home() {
         <section className="profile-facts page-width" aria-label="Personal information">
           <div><span>Education</span><strong>UC Berkeley EECS</strong></div>
           <div><span>Graduation</span><strong>May 2028</strong></div>
-          <div><span>Publications</span><strong>2 Peer-Reviewed Papers</strong></div>
+          <div><span>Languages</span><strong>English · Mandarin Chinese</strong></div>
           <div><span>Focus</span><strong>AI/ML · SWE · Robotics</strong></div>
         </section>
 
